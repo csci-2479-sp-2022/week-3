@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\VideoGameController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +24,9 @@ Route::get('/some-other-url', function () {
 
 Route::get('/config', function() {
     return phpinfo();
+});
+
+Route::controller(VideoGameController::class)->group(function() {
+    Route::get('/games', 'show');
+    Route::get('/games/{id}', 'view');
 });
