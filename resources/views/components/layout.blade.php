@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Week 3</title>
+    <title>Weekly demo app</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <script src="/js/app.js"></script>
 </head>
 <body>
-    <h1>Week 3 - Laravel Demo</h1>
-    <p>{{ $greeting }}</p>
-    <a href="/some-other-url">Want to go somewhere else?</a>
+    <div>
+        {{ $slot }}
+    </div>
 </body>
 </html>
