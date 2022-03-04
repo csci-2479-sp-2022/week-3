@@ -14,19 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/', function () {
+    return view('greeting', ['name' => 'James']);
+});
+
 Route::get('/', function () {
     return view('welcome', ['greeting' => 'Welcome! Laravel is so cool']);
 });
-
+/*
 Route::get('/some-other-url', function () {
     return view('somewhere-else');
 });
+
+*/
 
 Route::get('/config', function() {
     return phpinfo();
 });
 
-Route::controller(VideoGameController::class)->group(function() {
-    Route::get('/games', 'show');
-    Route::get('/games/{id}', 'view');
-});
+
