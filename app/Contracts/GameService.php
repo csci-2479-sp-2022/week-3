@@ -7,5 +7,5 @@ interface GameService
 {
     function getGameById(int $id): VideoGame;
 
-    function getGames(): array;
+    function getGames();
 }

@@ -21,12 +21,13 @@ class VideoGameService implements GameService
     /**
      * pretend this is making a call to a service layer that in turn calls a data layer
      */
-    public function getGames(): array
+    public function getGames()
     {
-        return [
-            new VideoGame(1, 'Super Mario Bros', '1985', 'NES', true),
-            new VideoGame(2, 'Super Castlevania IV', '1991', 'SNES', true),
-            new VideoGame(3, 'Chrono Trigger', '1995', 'SNES', true),
-        ];
+        return VideoGame::all();
+        // return [
+        //     new VideoGame([1, 'Super Mario Bros', '1985', 'NES', true]),
+        //     new VideoGame([2, 'Super Castlevania IV', '1991', 'SNES', true]),
+        //     new VideoGame([3, 'Chrono Trigger', '1995', 'SNES', true]),
+        // ];
     }
 }

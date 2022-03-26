@@ -1,4 +1,5 @@
 <x-layout>
+    <x-slot name="title">Game list</x-slot>
     <h1>Game list</h1>
 
     <table>

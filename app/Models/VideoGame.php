@@ -1,17 +1,21 @@
 <?php
 namespace App\Models;
 
-class VideoGame
-{
-    public function __construct(
-        public int $id,
-        public string $title,
-        public string $releaseYear,
-        public string $system,
-        public bool $completed
-    ) { }
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-    public function completedYesNo(): string
+class VideoGame extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'id',
+        'title',
+        'release_year',
+        'completed,'
+    ];
+
+    public function completedYesNo(): bool
     {
         return $this->completed ? 'Yes' : 'No';
     }
